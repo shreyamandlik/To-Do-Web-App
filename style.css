@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;1,100&family=Oswald:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+   min-height: 100vh;
+   height: 100%;
+    background: linear-gradient(130deg, #2e5c82, #326c87);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: rgba(0, 0, 0, 0.178);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h1 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(69, 71, 71, 0.797);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 23px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: azure;
+    font-weight: bold;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 12px 30px;
+    background: floralwhite;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    color: white;
+    padding: 12px 8px 12px 45px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-image: url(/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+
+.checked {
+    color: rgb(229, 227, 227);
+    text-decoration: line-through;
+}
+
+.checked::before {
+    background-image: url(/images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    top:5px;
+    right:0px;
+    width:40px;
+    height:40px;
+    font-size: 22px;
+    color: rgb(229, 227, 227);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: rgb(91, 90, 89);
+}
+
+@media (max-width:500px) {
+    ul li{
+        font-size: 14px;
+    }
+    ul li span{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:410px) {
+    ul li{
+        font-size: 12px;
+    }
+    ul li span{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:370px) {
+    ul li{
+        font-size: 10px;
+    }
+    ul li span{
+        font-size: 18px;
+    }
+}
+
